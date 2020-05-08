@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency App</title>
+</head>
+<body>
+
+<form th:action="@{/currency/choose}" th:object="${userCurrency}" method="get">
+    <p>Wybierz walutę do odgadnięcia: <input type="text" th:field="*{currencyName}"></p>
+    <p>Podaj kurs waluty: <input type="text" th:field="*{exchangeRate}"></p>
+    <p><input type="submit" value="Sprawdź"></p>
+    <p><td th:text="${status}"></p>
+</form>
+</body>
+</html>
